@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.music-list {
+  margin-top: 20px;
+}
+
+.music-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.music-list th,
+.music-list td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.music-list th {
+  background-color: #f2f2f2;
+  text-align: left;
+}

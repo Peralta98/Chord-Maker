@@ -1,0 +1,198 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.grid-container {
+  margin-top: 50px;
+  height: 50%;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+
+  align-items: center; /* Centraliza verticalmente */
+}
+
+/* Styling for each grid item */
+.grid-item {
+  position: relative; /* Definir como relativo para posicionar os ícones */
+  background-color: #ededed; /* Transparent background */
+  width: 20%;
+  height: 150px; /* Fix height for consistency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 2px solid black; /* Black border on the left */
+  cursor: pointer;
+  margin-bottom: 10px; /* Space between rows */
+  padding-right: 30px; /* Adicionando espaço à direita para os ícones */
+  font-size: 42px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.chord-text {
+  font-size: 42px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Styling for edit and delete icons */
+.edit-icon {
+  display: none; /* Inicialmente escondidos */
+  font-size: 30px;
+  color: black;
+  position: absolute;
+  top: 50%; /* Posiciona no meio verticalmente */
+  transform: translateY(120%); /* Corrige a posição vertical */
+}
+
+.delete-icon {
+  display: none; /* Inicialmente escondidos */
+  font-size: 20px;
+  color: red;
+  position: absolute;
+  top: 50%; /* Posiciona no meio verticalmente */
+  transform: translateY(-50%); /* Corrige a posição vertical */
+}
+
+.edit-icon {
+  left: 10px; /* Distância da esquerda */
+  margin-top: 10px;
+}
+
+.delete-icon {
+  right: 10px; /* Distância da direita */
+  margin-top: 10px;
+}
+
+/* Mostra os ícones quando o cursor está sobre o compasso */
+.grid-item:hover .edit-icon,
+.grid-item:hover .delete-icon {
+  display: block;
+}
+
+.grid-item.add {
+  background-color: #a3ffa3;
+}
+
+/* Styling para o modal de confirmação */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* CSS para centralizar as opções do modal */
+.modal-options {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-btn {
+  margin: 10px;
+}
+
+.modal-content p {
+  margin-bottom: 10px;
+}
+
+.modal-content button {
+  margin-right: 10px;
+}
+
+.modal-content button:last-child {
+  margin-right: 0;
+}
+
+/* Styling para o modal de edição */
+.edit-modal-content {
+  display: flex;
+  flex-direction: column;
+  width: 600px; /* Aumenta o tamanho do modal */
+}
+
+.edit-modal-content label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.edit-modal-content select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.edit-modal-content button {
+  margin-top: 10px;
+}
+
+.edit-modal-content button:last-child {
+  margin-right: 0;
+}
+
+/* Layout das colunas no modal de edição */
+.modal-column-left,
+.modal-column-right {
+  width: 45%;
+  float: left;
+}
+
+.modal-column-left {
+  padding-right: 20px;
+}
+
+.modal-column-right {
+  padding-left: 20px;
+}
+
+select {
+  text-align-last: center;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Styling para a label "Mais opções" */
+.more-options-label {
+  display: block;
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: 10px;
+}
+
+.music-title {
+  display: flex;
+  justify-content: center;
+}
